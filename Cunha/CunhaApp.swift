@@ -11,7 +11,7 @@ import SwiftUI
 struct CunhaApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView(viewModel: TickersViewModel())
+            EntitiesView(viewModel: EntitesViewModel())
         }
     }
 }

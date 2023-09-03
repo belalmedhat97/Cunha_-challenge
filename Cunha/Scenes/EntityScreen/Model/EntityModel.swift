@@ -7,12 +7,12 @@
 
 import Foundation
 
-struct TickersModel: Codable, Hashable {
+struct EntityModel: Codable, Hashable {
     var pagination: Pagination?
-    var data: [TickerData]?
+    var data: [EntityData]?
 }
 
-struct TickerData: Codable, Hashable {
+struct EntityData: Codable, Hashable {
     var name: String?
     var symbol: String?
     var has_intraday: Bool?

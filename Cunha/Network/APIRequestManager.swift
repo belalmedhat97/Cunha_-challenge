@@ -6,16 +6,38 @@
 //
 
 import Foundation
-protocol TickersRequestProtocol {
-    func requestTickers(_ by: String) async -> (result:TickersModel?,error:Error?)
-
+protocol EntityRequestProtocol {
+    func requestEntity(_ by: String) async -> (result:EntityModel?,error:Error?)
 }
-class ApiRequestsManager: TickersRequestProtocol {
+
+protocol EntityTimesRequestProtcols {
+    func requestEntityBetweenIntervals(_ symbol: String, from: String, to: String) async -> (result:EntityTimeModel?,error:Error?)
+}
+
+class ApiRequestsManager: EntityRequestProtocol {
     
     private let network = ApiClient()
-    func requestTickers(_ by: String) async -> (result:TickersModel?,error:Error?) {
+    func requestEntity(_ by: String) async -> (result:EntityModel?,error:Error?) {
         do {
-            let result = try await network.Request(URL: TickersRoute.tickers(search:by).urlRequest, responseModel: TickersModel())
+            let result = try await network.Request(URL: EntitiesRoute.entity(search:by).urlRequest, responseModel: EntityModel())
+            if result.error != nil {
+                return (nil,result.error)
+            }else{
+                guard result.success != nil else {
+                    let error = NSError(domain:"no city exist", code: 422, userInfo:nil)
+                    return (nil,error)
+                }
+                return (result.success,nil)
+            }
+        }catch (let error) {
+            return (nil,error)
+        }
+    }
+}
+extension ApiRequestsManager: EntityTimesRequestProtcols {
+    func requestEntityBetweenIntervals(_ symbol: String, from: String, to: String) async -> (result: EntityTimeModel?, error: Error?) {
+        do {
+            let result = try await network.Request(URL: EndOfDayRoute.entityWithIntervels(symbol: symbol, from: from, to: to).urlRequest, responseModel: EntityTimeModel())
             if result.error != nil {
                 return (nil,result.error)
             }else{

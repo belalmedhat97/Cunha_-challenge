@@ -1,0 +1,29 @@
+{
+  "configurations" : [
+    {
+      "id" : "F1AFDC89-936B-480B-8FCB-11671598A35C",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:Cunha.xcodeproj",
+      "identifier" : "573F1FA92AA39C6F00CA5BCB",
+      "name" : "Cunha"
+    }
+  },
+  "testTargets" : [
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:Cunha.xcodeproj",
+        "identifier" : "573F1FB92AA39C7000CA5BCB",
+        "name" : "CunhaTests"
+      }
+    }
+  ],
+  "version" : 1
+}

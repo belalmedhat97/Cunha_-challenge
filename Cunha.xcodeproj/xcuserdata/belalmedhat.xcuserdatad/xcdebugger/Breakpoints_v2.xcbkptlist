@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "6BF30F93-CE01-47AE-9710-3B71742B01ED"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B0910AB9-CDE0-4C66-AB48-F49E83305925"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Cunha/Scenes/TickersScreen/ViewModel/TickersViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
+            landmarkName = "getTickers(by:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "B0910AB9-CDE0-4C66-AB48-F49E83305925 - 1d109a69f8648c93"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for closure #1 @Sendable () async -&gt; () in Cunha.TickersViewModel.getTickers(by: Swift.String) -&gt; ()"
+                  moduleName = "Cunha"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/belalmedhat/Movies/Cunha/Cunha/Scenes/TickersScreen/ViewModel/TickersViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "30"
+                  endingLineNumber = "30"
+                  offsetFromSymbolStart = "828">
+               </Location>
+               <Location
+                  uuid = "B0910AB9-CDE0-4C66-AB48-F49E83305925 - abda7aea7947ca9d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for closure #1 @Sendable () async -&gt; () in Cunha.TickersViewModel.getTickers(by: Swift.String) -&gt; ()"
+                  moduleName = "Cunha"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/belalmedhat/Movies/Cunha/Cunha/Scenes/TickersScreen/ViewModel/TickersViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "30"
+                  endingLineNumber = "30"
+                  offsetFromSymbolStart = "644">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

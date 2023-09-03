@@ -14,6 +14,14 @@
 		573F1FBF2AA39C7000CA5BCB /* CunhaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 573F1FBE2AA39C7000CA5BCB /* CunhaTests.swift */; };
 		573F1FC92AA39C7000CA5BCB /* CunhaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 573F1FC82AA39C7000CA5BCB /* CunhaUITests.swift */; };
 		573F1FCB2AA39C7000CA5BCB /* CunhaUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 573F1FCA2AA39C7000CA5BCB /* CunhaUITestsLaunchTests.swift */; };
+		573F1FD92AA39D5500CA5BCB /* URLConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 573F1FD82AA39D5500CA5BCB /* URLConfigurator.swift */; };
+		573F1FDB2AA3A13400CA5BCB /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 573F1FDA2AA3A13400CA5BCB /* APIClient.swift */; };
+		573F1FDD2AA3A15F00CA5BCB /* Endpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 573F1FDC2AA3A15F00CA5BCB /* Endpoints.swift */; };
+		573F1FE02AA3EC3300CA5BCB /* TickersRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 573F1FDF2AA3EC3300CA5BCB /* TickersRoute.swift */; };
+		573F1FE22AA3F41300CA5BCB /* APIRequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 573F1FE12AA3F41300CA5BCB /* APIRequestManager.swift */; };
+		573F1FE52AA3F4F400CA5BCB /* TickersModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 573F1FE42AA3F4F400CA5BCB /* TickersModel.swift */; };
+		573F1FEB2AA3FAEF00CA5BCB /* TickersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 573F1FEA2AA3FAEF00CA5BCB /* TickersViewModel.swift */; };
+		573F1FEF2AA4999C00CA5BCB /* SearchSubview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 573F1FEE2AA4999C00CA5BCB /* SearchSubview.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +52,15 @@
 		573F1FC42AA39C7000CA5BCB /* CunhaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CunhaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		573F1FC82AA39C7000CA5BCB /* CunhaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CunhaUITests.swift; sourceTree = "<group>"; };
 		573F1FCA2AA39C7000CA5BCB /* CunhaUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CunhaUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		573F1FD82AA39D5500CA5BCB /* URLConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLConfigurator.swift; sourceTree = "<group>"; };
+		573F1FDA2AA3A13400CA5BCB /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		573F1FDC2AA3A15F00CA5BCB /* Endpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoints.swift; sourceTree = "<group>"; };
+		573F1FDF2AA3EC3300CA5BCB /* TickersRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TickersRoute.swift; sourceTree = "<group>"; };
+		573F1FE12AA3F41300CA5BCB /* APIRequestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequestManager.swift; sourceTree = "<group>"; };
+		573F1FE42AA3F4F400CA5BCB /* TickersModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TickersModel.swift; sourceTree = "<group>"; };
+		573F1FEA2AA3FAEF00CA5BCB /* TickersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TickersViewModel.swift; sourceTree = "<group>"; };
+		573F1FEC2AA497D000CA5BCB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		573F1FEE2AA4999C00CA5BCB /* SearchSubview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchSubview.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,8 +111,10 @@
 		573F1FAC2AA39C6F00CA5BCB /* Cunha */ = {
 			isa = PBXGroup;
 			children = (
+				573F1FEC2AA497D000CA5BCB /* Info.plist */,
+				573F1FE62AA3FA8400CA5BCB /* Scenes */,
+				573F1FD72AA39D4600CA5BCB /* Network */,
 				573F1FAD2AA39C6F00CA5BCB /* CunhaApp.swift */,
-				573F1FAF2AA39C6F00CA5BCB /* ContentView.swift */,
 				573F1FB12AA39C6F00CA5BCB /* Assets.xcassets */,
 				573F1FB32AA39C6F00CA5BCB /* Preview Content */,
 			);
@@ -125,6 +144,77 @@
 				573F1FCA2AA39C7000CA5BCB /* CunhaUITestsLaunchTests.swift */,
 			);
 			path = CunhaUITests;
+			sourceTree = "<group>";
+		};
+		573F1FD72AA39D4600CA5BCB /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				573F1FDE2AA3EC1700CA5BCB /* Routes */,
+				573F1FD82AA39D5500CA5BCB /* URLConfigurator.swift */,
+				573F1FDC2AA3A15F00CA5BCB /* Endpoints.swift */,
+				573F1FDA2AA3A13400CA5BCB /* APIClient.swift */,
+				573F1FE12AA3F41300CA5BCB /* APIRequestManager.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		573F1FDE2AA3EC1700CA5BCB /* Routes */ = {
+			isa = PBXGroup;
+			children = (
+				573F1FDF2AA3EC3300CA5BCB /* TickersRoute.swift */,
+			);
+			path = Routes;
+			sourceTree = "<group>";
+		};
+		573F1FE32AA3F4E900CA5BCB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				573F1FE42AA3F4F400CA5BCB /* TickersModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		573F1FE62AA3FA8400CA5BCB /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				573F1FE72AA3FA8F00CA5BCB /* TickersScreen */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		573F1FE72AA3FA8F00CA5BCB /* TickersScreen */ = {
+			isa = PBXGroup;
+			children = (
+				573F1FE32AA3F4E900CA5BCB /* Model */,
+				573F1FE92AA3FAB000CA5BCB /* ViewModel */,
+				573F1FE82AA3FAAC00CA5BCB /* View */,
+			);
+			path = TickersScreen;
+			sourceTree = "<group>";
+		};
+		573F1FE82AA3FAAC00CA5BCB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				573F1FED2AA4998C00CA5BCB /* subviews */,
+				573F1FAF2AA39C6F00CA5BCB /* ContentView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		573F1FE92AA3FAB000CA5BCB /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				573F1FEA2AA3FAEF00CA5BCB /* TickersViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		573F1FED2AA4998C00CA5BCB /* subviews */ = {
+			isa = PBXGroup;
+			children = (
+				573F1FEE2AA4999C00CA5BCB /* SearchSubview.swift */,
+			);
+			path = subviews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,6 +349,14 @@
 			files = (
 				573F1FB02AA39C6F00CA5BCB /* ContentView.swift in Sources */,
 				573F1FAE2AA39C6F00CA5BCB /* CunhaApp.swift in Sources */,
+				573F1FD92AA39D5500CA5BCB /* URLConfigurator.swift in Sources */,
+				573F1FE52AA3F4F400CA5BCB /* TickersModel.swift in Sources */,
+				573F1FE22AA3F41300CA5BCB /* APIRequestManager.swift in Sources */,
+				573F1FEF2AA4999C00CA5BCB /* SearchSubview.swift in Sources */,
+				573F1FDB2AA3A13400CA5BCB /* APIClient.swift in Sources */,
+				573F1FEB2AA3FAEF00CA5BCB /* TickersViewModel.swift in Sources */,
+				573F1FDD2AA3A15F00CA5BCB /* Endpoints.swift in Sources */,
+				573F1FE02AA3EC3300CA5BCB /* TickersRoute.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -420,6 +518,7 @@
 				DEVELOPMENT_TEAM = G9Q79MB7M4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Cunha/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -449,6 +548,7 @@
 				DEVELOPMENT_TEAM = G9Q79MB7M4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Cunha/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

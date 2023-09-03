@@ -44,6 +44,11 @@ struct EntitiesView<VM>: View where VM:EntitesViewModelProtocols {
             }.padding(EdgeInsets(top: 10, leading: 20, bottom: 10, trailing: 20)).onAppear(){
                 viewModel.service = ApiRequestsManager()
             }
+        }.alert(viewModel.error.txt, isPresented: $viewModel.error.show) {
+            Button("OK", role: .cancel) {
+                viewModel.error.show = false
+                viewModel.error.txt = ""
+            }
         }
 
     }

@@ -8,7 +8,7 @@
 import Foundation
 
 class ApiClient {
-    func Request<T:Codable>(URL:URLRequest, responseModel:T) async throws -> (success:T?,error:Error?){
+    func Request<T:Codable,S:Codable>(URL:URLRequest, responseModel:T,errorModel:S) async throws -> (success:T?,badRequest:S?,error:NetworkError?){
         let session = URLSession.shared
         let (data,response) = try await session.data(for: URL)
         if let HTTPResponse = response as? HTTPURLResponse {
@@ -16,21 +16,21 @@ class ApiClient {
             case 200..<300:
                 do{
                     let responseDecoded = try JSONDecoder().decode(T.self, from: data)
-                    return (responseDecoded,nil)
-                } catch let error {
-                    print(error)
-                    return(nil,error)
+                    return (responseDecoded,nil,nil)
+                } catch  {
+                    return(nil,nil,.jsonParsingFail)
                 }
             case 400...500:
-                return (nil,getError(code: HTTPResponse.statusCode, description: response.debugDescription))
+                do{
+                    let responseErrorDecoded = try JSONDecoder().decode(S.self, from: data)
+                    return (nil,responseErrorDecoded,nil)
+                } catch  {
+                    return(nil,nil,.jsonParsingFail)
+                }
             default:
-                return (nil,getError(code: HTTPResponse.statusCode, description: response.debugDescription))
+                return (nil,nil,.responseUnsuccessful)
             }
         }
-        return (nil,nil)
-    }
-    
-    private func getError(code:Int, description:String) -> Error {
-        return NSError(domain:description, code:code, userInfo:nil)
+        return (nil,nil,nil)
     }
 }

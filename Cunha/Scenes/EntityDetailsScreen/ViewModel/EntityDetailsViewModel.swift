@@ -22,11 +22,17 @@ class EntityDetailsViewModel: EntityDetailsViewModelProtocols {
     
     func getEntityDetailsWithIntervals(by: String, from: String, to: String) {
         Task {
+            entityTimes = []
             let entityTimeIntervalsInfo = await service?.requestEntityBetweenIntervals(by, from: from, to: to)
             guard entityTimeIntervalsInfo?.error == nil else {
                 error.txt = entityTimeIntervalsInfo?.error?.localizedDescription ?? ""
                 error.show = true
             return
+            }
+            guard entityTimeIntervalsInfo?.result?.data?.count != 0 else {
+                error.txt = MainError.emptyEntityTime.localizedDescription
+                error.show = true
+                return
             }
             guard let timeIntervalsList = entityTimeIntervalsInfo?.result?.data else {return}
             entityTimes = timeIntervalsList

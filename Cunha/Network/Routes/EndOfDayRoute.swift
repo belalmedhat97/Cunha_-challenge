@@ -20,7 +20,7 @@ enum EndOfDayRoute:Service {
     var parameters: RequestParams {
         switch self {
         case .entityWithIntervels(let symbol, let from, let to):
-            return.url(["access_key":Endpoints.apikey,"symbols":symbol,"date_from":from, "date_to":to,"limit":20])
+            return.url(["access_key":Endpoints.apikey,"symbols":symbol,"date_from":from, "date_to":to,"limit":100])
         }
     }
     var method: HTTPMethod {

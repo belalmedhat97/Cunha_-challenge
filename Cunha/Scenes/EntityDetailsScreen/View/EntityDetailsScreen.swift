@@ -22,16 +22,16 @@ struct EntityDetailsView<VM>: View where VM:EntityDetailsViewModelProtocols {
                 VStack(spacing:10){
                     Text("Symbol: \(entityInfo?.symbol ?? "")")
                     Text("Stock: \(entityInfo?.stock_exchange?.name ?? "")")
-                    Text("last Close: \(viewModel.entityTimes?[0].close ?? 0.0)")
+//                    Text("last Close: \(viewModel.entityTimes?[0].close ?? 0.0)")
                 }
                 Divider().frame(height:3)
                 Text("CHART").foregroundColor(Color.white).padding(EdgeInsets(top: 4, leading: 12, bottom: 4, trailing: 12)).background(Color.black).cornerRadius(5)
                 Divider().frame(height:3)
-                Chart {
-                    ForEach(viewModel.entityTimes ?? [],id: \.self) { entity in
-                        LineMark(x: .value("Day",entity.date ?? ""),y: .value("Min", entity.close ?? 0.0))
-                    }
-                }.cornerRadius(7).padding(20)
+                    Chart {
+                        ForEach(viewModel.entityTimes ?? [],id: \.self) { entity in
+                            LineMark(x: .value("Day", (entity.date?.toDate()) ?? Date(), unit: .day), y: .value("Close price", entity.close ?? 0.0))
+                        }
+                    }.padding(10).foregroundStyle(.orange)
             }
         }.onAppear(){
             viewModel.service = ApiRequestsManager()

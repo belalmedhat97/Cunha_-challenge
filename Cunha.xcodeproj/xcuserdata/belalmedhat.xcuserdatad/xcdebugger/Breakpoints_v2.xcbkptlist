@@ -103,7 +103,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "18AD0AA0-67F3-4CE0-B4B0-FD7202172FE4"
+            uuid = "C93AEFBD-0B52-44DA-A27C-E848828D2346"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -116,7 +116,7 @@
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "18AD0AA0-67F3-4CE0-B4B0-FD7202172FE4 - 11731a264b945914"
+                  uuid = "C93AEFBD-0B52-44DA-A27C-E848828D2346 - 11731a264b945914"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -131,7 +131,7 @@
                   offsetFromSymbolStart = "1288">
                </Location>
                <Location
-                  uuid = "18AD0AA0-67F3-4CE0-B4B0-FD7202172FE4 - 4cb81475b8111a12"
+                  uuid = "C93AEFBD-0B52-44DA-A27C-E848828D2346 - 4cb81475b8111a12"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -145,131 +145,7 @@
                   endingLineNumber = "32"
                   offsetFromSymbolStart = "1016">
                </Location>
-               <Location
-                  uuid = "18AD0AA0-67F3-4CE0-B4B0-FD7202172FE4 - 11731a264b945914"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(1) suspend resume partial function for closure #1 @Sendable () async -&gt; () in Cunha.EntityDetailsViewModel.getEntityDetailsWithIntervals(by: Swift.String, from: Swift.String, to: Swift.String) -&gt; ()"
-                  moduleName = "Cunha"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/belalmedhat/Movies/Cunha/Cunha/Scenes/EntityDetailsScreen/ViewModel/EntityDetailsViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "32"
-                  endingLineNumber = "32"
-                  offsetFromSymbolStart = "1320">
-               </Location>
-               <Location
-                  uuid = "18AD0AA0-67F3-4CE0-B4B0-FD7202172FE4 - 4cb81475b8111a12"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(3) suspend resume partial function for closure #1 @Sendable () async -&gt; () in Cunha.EntityDetailsViewModel.getEntityDetailsWithIntervals(by: Swift.String, from: Swift.String, to: Swift.String) -&gt; ()"
-                  moduleName = "Cunha"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/belalmedhat/Movies/Cunha/Cunha/Scenes/EntityDetailsScreen/ViewModel/EntityDetailsViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "32"
-                  endingLineNumber = "32"
-                  offsetFromSymbolStart = "1044">
-               </Location>
             </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "CC7F5E7C-6D4C-4214-A0C7-CD92EBC598F1"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Cunha/Network/APIRequestManager.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "40"
-            endingLineNumber = "40"
-            landmarkName = "requestEntityBetweenIntervals(_:from:to:)"
-            landmarkType = "9">
-            <Locations>
-               <Location
-                  uuid = "CC7F5E7C-6D4C-4214-A0C7-CD92EBC598F1 - e164484a5f4aee3e"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(1) suspend resume partial function for Cunha.ApiRequestsManager.requestEntityBetweenIntervals(_: Swift.String, from: Swift.String, to: Swift.String) async -&gt; (result: Swift.Optional&lt;Cunha.EntityTimeModel&gt;, error: Swift.Optional&lt;Swift.Error&gt;)"
-                  moduleName = "Cunha"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/belalmedhat/Movies/Cunha/Cunha/Network/APIRequestManager.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "40"
-                  endingLineNumber = "40"
-                  offsetFromSymbolStart = "160">
-               </Location>
-               <Location
-                  uuid = "CC7F5E7C-6D4C-4214-A0C7-CD92EBC598F1 - e61d4109a8486248"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(2) await resume partial function for Cunha.ApiRequestsManager.requestEntityBetweenIntervals(_: Swift.String, from: Swift.String, to: Swift.String) async -&gt; (result: Swift.Optional&lt;Cunha.EntityTimeModel&gt;, error: Swift.Optional&lt;Swift.Error&gt;)"
-                  moduleName = "Cunha"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/belalmedhat/Movies/Cunha/Cunha/Network/APIRequestManager.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "40"
-                  endingLineNumber = "40"
-                  offsetFromSymbolStart = "48">
-               </Location>
-               <Location
-                  uuid = "CC7F5E7C-6D4C-4214-A0C7-CD92EBC598F1 - fa522d0891b82a3c"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(3) suspend resume partial function for Cunha.ApiRequestsManager.requestEntityBetweenIntervals(_: Swift.String, from: Swift.String, to: Swift.String) async -&gt; (result: Swift.Optional&lt;Cunha.EntityTimeModel&gt;, error: Swift.Optional&lt;Swift.Error&gt;)"
-                  moduleName = "Cunha"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/belalmedhat/Movies/Cunha/Cunha/Network/APIRequestManager.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "40"
-                  endingLineNumber = "40"
-                  offsetFromSymbolStart = "160">
-               </Location>
-               <Location
-                  uuid = "CC7F5E7C-6D4C-4214-A0C7-CD92EBC598F1 - c6a7df69cc90c83d"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(4) suspend resume partial function for Cunha.ApiRequestsManager.requestEntityBetweenIntervals(_: Swift.String, from: Swift.String, to: Swift.String) async -&gt; (result: Swift.Optional&lt;Cunha.EntityTimeModel&gt;, error: Swift.Optional&lt;Swift.Error&gt;)"
-                  moduleName = "Cunha"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/belalmedhat/Movies/Cunha/Cunha/Network/APIRequestManager.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "40"
-                  endingLineNumber = "40"
-                  offsetFromSymbolStart = "100">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "7F928D60-5795-4423-9ED1-63F8E0D6C9E6"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Cunha/Network/APIRequestManager.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "44"
-            endingLineNumber = "44"
-            landmarkName = "requestEntityBetweenIntervals(_:from:to:)"
-            landmarkType = "9">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

@@ -35,7 +35,7 @@ final class EntityViewModelTests: XCTestCase {
             })
             .store(in: &cancellable)
         // when
-        viewModel?.getEntities(by: "")
+        viewModel?.getEntities(with: "")
         // then
         wait(for: [expectation], timeout: 10)
     }
@@ -52,7 +52,7 @@ final class EntityViewModelTests: XCTestCase {
             })
             .store(in: &cancellable)
         // when
-        viewModel?.getEntities(by: "")
+        viewModel?.getEntities(with: "")
         // then
         wait(for: [expectation], timeout: 10)
 

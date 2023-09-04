@@ -10,7 +10,6 @@ enum MainError: String, Error {
     case noDataFound
     case emptyEntityTime
     case wrongTimeIntervals
-    
     var localizedDescription: String {
         switch self {
         case .noDataFound: return "No data found on server, try another entity"

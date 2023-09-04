@@ -10,7 +10,6 @@ enum NetworkError: String, Error {
     case noInternetConnection
     case jsonParsingFail
     case responseUnsuccessful
-    
     var localizedDescription: String {
         switch self {
         case .noInternetConnection: return "Please Check Your Internet Connection"

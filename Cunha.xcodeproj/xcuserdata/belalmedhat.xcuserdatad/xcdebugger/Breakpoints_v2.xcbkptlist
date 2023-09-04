@@ -68,5 +68,255 @@
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5742A1A7-3B94-4F11-8FE9-9467894D5DA4"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Cunha/Scenes/EntityDetailsScreen/ViewModel/EntityDetailsViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
+            landmarkName = "getEntityDetailsWithIntervals(with:fromDate:toDate:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "5742A1A7-3B94-4F11-8FE9-9467894D5DA4 - ce44686e6cf58b80"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for closure #1 @Sendable () async -&gt; () in Cunha.EntityDetailsViewModel.getEntityDetailsWithIntervals(with: Swift.String, fromDate: Swift.String, toDate: Swift.String) -&gt; ()"
+                  moduleName = "Cunha"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/belalmedhat/Movies/Cunha/Cunha/Scenes/EntityDetailsScreen/ViewModel/EntityDetailsViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "33"
+                  endingLineNumber = "33"
+                  offsetFromSymbolStart = "1772">
+               </Location>
+               <Location
+                  uuid = "5742A1A7-3B94-4F11-8FE9-9467894D5DA4 - e1d5b81d3e884ffe"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for closure #1 @Sendable () async -&gt; () in Cunha.EntityDetailsViewModel.getEntityDetailsWithIntervals(with: Swift.String, fromDate: Swift.String, toDate: Swift.String) -&gt; ()"
+                  moduleName = "Cunha"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/belalmedhat/Movies/Cunha/Cunha/Scenes/EntityDetailsScreen/ViewModel/EntityDetailsViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "33"
+                  endingLineNumber = "33"
+                  offsetFromSymbolStart = "1428">
+               </Location>
+               <Location
+                  uuid = "5742A1A7-3B94-4F11-8FE9-9467894D5DA4 - ce44686e6cf58b80"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for closure #1 @Sendable () async -&gt; () in Cunha.EntityDetailsViewModel.getEntityDetailsWithIntervals(with: Swift.String, fromDate: Swift.String, toDate: Swift.String) -&gt; ()"
+                  moduleName = "Cunha"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/belalmedhat/Movies/Cunha/Cunha/Scenes/EntityDetailsScreen/ViewModel/EntityDetailsViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "33"
+                  endingLineNumber = "33"
+                  offsetFromSymbolStart = "2504">
+               </Location>
+               <Location
+                  uuid = "5742A1A7-3B94-4F11-8FE9-9467894D5DA4 - e1d5b81d3e884ffe"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for closure #1 @Sendable () async -&gt; () in Cunha.EntityDetailsViewModel.getEntityDetailsWithIntervals(with: Swift.String, fromDate: Swift.String, toDate: Swift.String) -&gt; ()"
+                  moduleName = "Cunha"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/belalmedhat/Movies/Cunha/Cunha/Scenes/EntityDetailsScreen/ViewModel/EntityDetailsViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "33"
+                  endingLineNumber = "33"
+                  offsetFromSymbolStart = "2148">
+               </Location>
+               <Location
+                  uuid = "5742A1A7-3B94-4F11-8FE9-9467894D5DA4 - ce44686e6cf58b80"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for closure #1 @Sendable () async -&gt; () in Cunha.EntityDetailsViewModel.getEntityDetailsWithIntervals(with: Swift.String, fromDate: Swift.String, toDate: Swift.String) -&gt; ()"
+                  moduleName = "Cunha"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/belalmedhat/Movies/Cunha/Cunha/Scenes/EntityDetailsScreen/ViewModel/EntityDetailsViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "33"
+                  endingLineNumber = "33"
+                  offsetFromSymbolStart = "2500">
+               </Location>
+               <Location
+                  uuid = "5742A1A7-3B94-4F11-8FE9-9467894D5DA4 - e1d5b81d3e884ffe"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for closure #1 @Sendable () async -&gt; () in Cunha.EntityDetailsViewModel.getEntityDetailsWithIntervals(with: Swift.String, fromDate: Swift.String, toDate: Swift.String) -&gt; ()"
+                  moduleName = "Cunha"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/belalmedhat/Movies/Cunha/Cunha/Scenes/EntityDetailsScreen/ViewModel/EntityDetailsViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "33"
+                  endingLineNumber = "33"
+                  offsetFromSymbolStart = "2144">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "69CC3DC3-27FC-4628-B2D5-D242ED251B20"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Cunha/Scenes/EntityDetailsScreen/ViewModel/EntityDetailsViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
+            landmarkName = "getEntityDetailsWithIntervals(with:fromDate:toDate:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "69CC3DC3-27FC-4628-B2D5-D242ED251B20 - ce44686e6cf58be1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for closure #1 @Sendable () async -&gt; () in Cunha.EntityDetailsViewModel.getEntityDetailsWithIntervals(with: Swift.String, fromDate: Swift.String, toDate: Swift.String) -&gt; ()"
+                  moduleName = "Cunha"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/belalmedhat/Movies/Cunha/Cunha/Scenes/EntityDetailsScreen/ViewModel/EntityDetailsViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "32"
+                  endingLineNumber = "32"
+                  offsetFromSymbolStart = "1064">
+               </Location>
+               <Location
+                  uuid = "69CC3DC3-27FC-4628-B2D5-D242ED251B20 - e1d5b81d3e884f9f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for closure #1 @Sendable () async -&gt; () in Cunha.EntityDetailsViewModel.getEntityDetailsWithIntervals(with: Swift.String, fromDate: Swift.String, toDate: Swift.String) -&gt; ()"
+                  moduleName = "Cunha"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/belalmedhat/Movies/Cunha/Cunha/Scenes/EntityDetailsScreen/ViewModel/EntityDetailsViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "32"
+                  endingLineNumber = "32"
+                  offsetFromSymbolStart = "792">
+               </Location>
+               <Location
+                  uuid = "69CC3DC3-27FC-4628-B2D5-D242ED251B20 - ce44686e6cf58be1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for closure #1 @Sendable () async -&gt; () in Cunha.EntityDetailsViewModel.getEntityDetailsWithIntervals(with: Swift.String, fromDate: Swift.String, toDate: Swift.String) -&gt; ()"
+                  moduleName = "Cunha"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/belalmedhat/Movies/Cunha/Cunha/Scenes/EntityDetailsScreen/ViewModel/EntityDetailsViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "32"
+                  endingLineNumber = "32"
+                  offsetFromSymbolStart = "1080">
+               </Location>
+               <Location
+                  uuid = "69CC3DC3-27FC-4628-B2D5-D242ED251B20 - e1d5b81d3e884f9f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for closure #1 @Sendable () async -&gt; () in Cunha.EntityDetailsViewModel.getEntityDetailsWithIntervals(with: Swift.String, fromDate: Swift.String, toDate: Swift.String) -&gt; ()"
+                  moduleName = "Cunha"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/belalmedhat/Movies/Cunha/Cunha/Scenes/EntityDetailsScreen/ViewModel/EntityDetailsViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "32"
+                  endingLineNumber = "32"
+                  offsetFromSymbolStart = "808">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C39F2421-D98E-4B49-BDFE-5C1163A96F2A"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Cunha/Scenes/EntityScreen/ViewModel/EntitesViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
+            landmarkName = "getEntities(with:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "C39F2421-D98E-4B49-BDFE-5C1163A96F2A - 1f3f343e194e6630"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for closure #1 @Sendable () async -&gt; () in Cunha.EntitesViewModel.getEntities(with: Swift.String) -&gt; ()"
+                  moduleName = "Cunha"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/belalmedhat/Movies/Cunha/Cunha/Scenes/EntityScreen/ViewModel/EntitesViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "30"
+                  endingLineNumber = "30"
+                  offsetFromSymbolStart = "952">
+               </Location>
+               <Location
+                  uuid = "C39F2421-D98E-4B49-BDFE-5C1163A96F2A - ef14dd2389475ace"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for closure #1 @Sendable () async -&gt; () in Cunha.EntitesViewModel.getEntities(with: Swift.String) -&gt; ()"
+                  moduleName = "Cunha"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/belalmedhat/Movies/Cunha/Cunha/Scenes/EntityScreen/ViewModel/EntitesViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "30"
+                  endingLineNumber = "30"
+                  offsetFromSymbolStart = "712">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "602E2E75-691B-4992-83E5-FD4149DFF434"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Cunha/Scenes/EntityDetailsScreen/View/EntityDetailsView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "82"
+            endingLineNumber = "82"
+            landmarkName = "setDatesIntervales()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

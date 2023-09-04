@@ -9,7 +9,7 @@ import Foundation
 @testable import Cunha
 
 class ApiRequestsManagerMock: EntityRequestProtocol, EntityTimesRequestProtcols {
-    func requestEntityBetweenIntervals(_ symbol: String, from: String, to: String) async -> (result:EntityTimeModel?,error:Error?) {
+    func requestEntityBetweenIntervals(_ symbol: String, fromDate: String, toDate: String) async -> (result:EntityTimeModel?,error:Error?) {
         
         return (JsonReaderStub.shared.load(file: "EntitiesIntervalStub", model: EntityTimeModel()),nil)
     }
@@ -20,7 +20,7 @@ class ApiRequestsManagerMock: EntityRequestProtocol, EntityTimesRequestProtcols 
     }
 }
 class ApiRequestsManagerFailMock: EntityRequestProtocol, EntityTimesRequestProtcols {
-    func requestEntityBetweenIntervals(_ symbol: String, from: String, to: String) async -> (result:EntityTimeModel?,error:Error?) {
+    func requestEntityBetweenIntervals(_ symbol: String, fromDate: String, toDate: String) async -> (result:EntityTimeModel?,error:Error?) {
         
         return (JsonReaderStub.shared.load(file: "EntitiesIntervalStub", model: EntityTimeModel()),NetworkError.noInternetConnection)
     }

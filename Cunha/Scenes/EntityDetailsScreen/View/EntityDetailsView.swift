@@ -15,13 +15,15 @@ struct EntityDetailsView<VM>: View where VM:EntityDetailsViewModelProtocols {
     @ObservedObject var viewModel: VM
 
     var body: some View {
-        VStack(spacing:10){
+        VStack(spacing: 10) {
             VStack(spacing:5) {
-                Text(entityInfo?.name ?? "").foregroundColor(Color.white).padding(EdgeInsets(top: 4, leading: 12, bottom: 4, trailing: 12)).background(Color.black).cornerRadius(5)
-                Divider().frame(height:3)
+                Text(entityInfo?.name ?? "").foregroundColor(Color.white)
+                    .padding(EdgeInsets(top: 4, leading: 12, bottom: 4, trailing: 12))
+                    .background(Color.black).cornerRadius(5)
+                    Divider().frame(height:3)
             }
-            VStack(spacing:30){
-                VStack(spacing:10){
+            VStack(spacing: 30) {
+                VStack(spacing: 10) {
                     Text("Symbol: \(entityInfo?.symbol ?? "")")
                     Text("Stock: \(entityInfo?.stock_exchange?.name ?? "")")
                     if viewModel.entityTimes?.first != nil {
@@ -30,35 +32,44 @@ struct EntityDetailsView<VM>: View where VM:EntityDetailsViewModelProtocols {
                     }
                 }
                 Divider().frame(height:3)
-                Text("CHART").foregroundColor(Color.white).padding(EdgeInsets(top: 4, leading: 12, bottom: 4, trailing: 12)).background(Color.black).cornerRadius(5)
-                Divider().frame(height:3)
+                Text("CHART").foregroundColor(Color.white)
+                    .padding(EdgeInsets(top: 4, leading: 12, bottom: 4, trailing: 12))
+                    .background(Color.black).cornerRadius(5)
+                    Divider().frame(height:3)
                     Chart {
                         ForEach(viewModel.entityTimes ?? [],id: \.self) { entity in
-                            LineMark(x: .value("Day", (entity.date?.toDate()) ?? Date(), unit: .day), y: .value("Close price", entity.close ?? 0.0))
+                            LineMark(x: .value("Day", (entity.date?.toDate()) ?? Date(), unit: .day),
+                                     y: .value("Close price", entity.close ?? 0.0))
                         }
                     }.padding(10).foregroundStyle(.orange)
                 HStack(spacing:5) {
-                    DatePicker( "Start date", selection: $startDate, in: ...Date(), displayedComponents: [.date]) .padding()
-                    DatePicker( "End date", selection: $endDate, in: ...Date(), displayedComponents: [.date]) .padding()
-  
-
+                    DatePicker("Start date",
+                               selection: $startDate,
+                               in: ...Date(),
+                               displayedComponents: [.date]).padding()
+                    DatePicker("End date",
+                               selection: $endDate,
+                               in: ...Date(),
+                               displayedComponents: [.date]).padding()
                 }
                 Button {
-                    guard endDate >= startDate else  {
+                    guard endDate >= startDate else {
                         viewModel.error.show = true
                         viewModel.error.txt = MainError.wrongTimeIntervals.localizedDescription
                         return}
-                    viewModel.getEntityDetailsWithIntervals(by: entityInfo?.symbol ?? "", from: startDate.toString(), to: endDate.toString() )
+                    viewModel.getEntityDetailsWithIntervals(with: entityInfo?.symbol ?? "",
+                                                            fromDate: startDate.toString(),
+                                                            toDate: endDate.toString() )
                 } label: {
-                    Text("Search Intervals").foregroundColor(Color.white).padding(EdgeInsets(top: 4, leading: 12, bottom: 4, trailing: 12)).background(Color.blue).cornerRadius(5)
+                    Text("Search Intervals").foregroundColor(Color.white)
+                        .padding(EdgeInsets(top: 4, leading: 12, bottom: 4, trailing: 12))
+                        .background(Color.blue).cornerRadius(5)
                 }
-
-                
             }
-        }.onAppear(){
+        }.onAppear {
             viewModel.service = ApiRequestsManager()
-            viewModel.getEntityDetailsWithIntervals(by: entityInfo?.symbol ?? "", from: "", to: "")
-        }.onChange(of: viewModel.entityTimes, perform: { newValue in
+            viewModel.getEntityDetailsWithIntervals(with: entityInfo?.symbol ?? "", fromDate: "", toDate: "")
+        }.onChange(of: viewModel.entityTimes, perform: { _ in
             setDatesIntervales()
         }).alert(viewModel.error.txt, isPresented: $viewModel.error.show) {
             Button("OK", role: .cancel) {
@@ -68,7 +79,7 @@ struct EntityDetailsView<VM>: View where VM:EntityDetailsViewModelProtocols {
         }
     }
     func setDatesIntervales() {
-        if viewModel.entityTimes?.count != 0 {
+        if viewModel.entityTimes?.isEmpty != true {
             endDate = viewModel.entityTimes?.first?.date?.toDate() ?? Date()
             startDate = viewModel.entityTimes?.last?.date?.toDate() ?? Date()
         }

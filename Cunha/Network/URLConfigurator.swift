@@ -11,16 +11,16 @@ enum HTTPMethod: String {
     case get = "GET"
 }
 enum RequestParams {
-    case body(_:[String:Any])
-    case url(_:[String:Any])
-    case NoParamter
+    case body(_: [String: Any])
+    case url(_: [String: Any])
+    case noParamter
 }
 protocol Service {
     var baseURL: String { get }
     var path: String { get }
     var parameters: RequestParams { get }
     var method: HTTPMethod { get }
-    var Header:[String:String] { get }
+    var header: [String: String] { get }
 }
 
 extension Service {
@@ -30,7 +30,7 @@ extension Service {
         }
         var request = URLRequest(url: url.appendingPathComponent(path))
         request.httpMethod = method.rawValue
-        request.allHTTPHeaderFields = Header
+        request.allHTTPHeaderFields = header
         switch parameters {
         case .body(let params):
             request.httpBody = try? JSONSerialization.data(withJSONObject: params, options: [])
@@ -38,10 +38,10 @@ extension Service {
             let queryParams = params.map { pair  in
                 return URLQueryItem(name: pair.key, value: "\(pair.value)")
             }
-            var components = URLComponents(string:url.appendingPathComponent(path).absoluteString)
+            var components = URLComponents(string: url.appendingPathComponent(path).absoluteString)
             components?.queryItems = queryParams
             request.url = components?.url
-        case .NoParamter:
+        case .noParamter:
             request.httpBody = nil
         }
         return request

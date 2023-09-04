@@ -6,7 +6,7 @@
 //
 
 import Foundation
-enum EntitiesRoute:Service {
+enum EntitiesRoute: Service {
     case entity(search: String)
     var baseURL: String {
         return Endpoints.baseURL
@@ -20,17 +20,16 @@ enum EntitiesRoute:Service {
     var parameters: RequestParams {
         switch self {
         case .entity(let search):
-            return.url(["access_key":Endpoints.apikey,"search":search])
+            return.url(["access_key": Endpoints.apikey, "search": search])
         }
     }
     var method: HTTPMethod {
         switch self {
         case .entity:
             return .get
-            
         }
     }
-    var Header: [String : String] {
+    var header: [String: String] {
         return [:]
     }
 }

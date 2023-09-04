@@ -6,8 +6,8 @@
 //
 
 import Foundation
-enum EndOfDayRoute:Service {
-    case entityWithIntervels(symbol:String, from:String, to:String)
+enum EndOfDayRoute: Service {
+    case entityWithIntervels(symbol: String, fromDate: String, toDate: String)
     var baseURL: String {
         return Endpoints.baseURL
     }
@@ -19,18 +19,19 @@ enum EndOfDayRoute:Service {
     }
     var parameters: RequestParams {
         switch self {
-        case .entityWithIntervels(let symbol, let from, let to):
-            return.url(["access_key":Endpoints.apikey,"symbols":symbol,"date_from":from, "date_to":to,"limit":100])
+        case .entityWithIntervels(let symbol, let fromDate, let toDate):
+            return.url(["access_key": Endpoints.apikey,
+                        "symbols": symbol, "date_from": fromDate,
+                        "date_to": toDate, "limit": 100])
         }
     }
     var method: HTTPMethod {
         switch self {
         case .entityWithIntervels:
             return .get
-            
         }
     }
-    var Header: [String : String] {
+    var header: [String: String] {
         return [:]
     }
 }

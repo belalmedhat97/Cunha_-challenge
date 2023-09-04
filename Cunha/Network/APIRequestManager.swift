@@ -7,11 +7,12 @@
 
 import Foundation
 protocol EntityRequestProtocol {
-    func requestEntity(_ by: String) async -> (result:EntityModel?,error:Error?)
+    func requestEntity(_ with: String) async -> (result: EntityModel?, error: Error?)
 }
 
 protocol EntityTimesRequestProtcols {
-    func requestEntityBetweenIntervals(_ symbol: String, from: String, to: String) async -> (result:EntityTimeModel?,error:Error?)
+    func requestEntityBetweenIntervals(_ symbol: String, fromDate: String, toDate: String) async
+    -> (result: EntityTimeModel?, error: Error?)
 }
 
 class ApiRequestsManager {
@@ -22,29 +23,40 @@ class ApiRequestsManager {
 }
 
 extension ApiRequestsManager: EntityRequestProtocol {
-    func requestEntity(_ by: String) async -> (result:EntityModel?,error:Error?) {
+    func requestEntity(_ with: String) async -> (result:EntityModel?,error:Error?) {
         do {
-            let result = try await network.Request(URL: EntitiesRoute.entity(search:by).urlRequest, responseModel: EntityModel(), errorModel: ErrorModel())
-            guard result.badRequest == nil else { return (nil,setupError(code: 422, description: result.badRequest?.error?.message ?? "")) }
-            guard result.error == nil else { return (nil,result.error) }
+            let result = try await
+            network.request(URL: EntitiesRoute.entity(search:with).urlRequest,
+                            responseModel: EntityModel(),
+                            errorModel: ErrorModel())
+            guard result.badRequest == nil else {
+                return (nil,setupError(code: 422, description: result.badRequest?.error?.message ?? "")) }
+            guard result.error == nil else {
+                return (nil,result.error) }
             return (result.success,nil)
-        }catch {
-            return (nil,setupError(code: -1009, description: NetworkError.noInternetConnection.localizedDescription))
+        } catch {
+            return (nil,setupError(code: -1009,
+                                   description: NetworkError.noInternetConnection.localizedDescription))
         }
     }
 }
 
 extension ApiRequestsManager: EntityTimesRequestProtcols {
-    func requestEntityBetweenIntervals(_ symbol: String, from: String, to: String) async -> (result: EntityTimeModel?, error: Error?) {
+    func requestEntityBetweenIntervals(_ symbol: String, fromDate: String, toDate: String) async
+    -> (result: EntityTimeModel?, error: Error?) {
         do {
-            let result = try await network.Request(URL: EndOfDayRoute.entityWithIntervels(symbol: symbol, from: from, to: to).urlRequest, responseModel: EntityTimeModel(), errorModel: ErrorModel())
-            guard result.badRequest == nil else { return (nil,setupError(code: 422, description: result.badRequest?.error?.message ?? "")) }
+            let result = try await
+            network.request(URL:
+            EndOfDayRoute.entityWithIntervels(symbol: symbol,fromDate: fromDate,
+            toDate: toDate).urlRequest,responseModel: EntityTimeModel(),
+            errorModel: ErrorModel())
+            guard result.badRequest == nil else {
+                return (nil,setupError(code: 422, description: result.badRequest?.error?.message ?? "")) }
             guard result.error == nil else { return (nil,result.error) }
             return (result.success,nil)
-        }catch {
-            return (nil,setupError(code: -1009, description: NetworkError.noInternetConnection.localizedDescription))
+        } catch {
+            return (nil,setupError(code: -1009,
+                                   description: NetworkError.noInternetConnection.localizedDescription))
         }
     }
 }
-
-
